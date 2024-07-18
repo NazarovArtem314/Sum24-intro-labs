@@ -1,0 +1,15 @@
+name: Manual Trigger And System Information
+run-name: Manual Trigger And System Information ${{ github.actor }} 
+on:
+  workflow_dispatch:
+
+jobs:
+  Explore-GitHub-Actions:
+    runs-on: ubuntu-latest
+    steps:
+
+      - run: echo "Hardware"
+      - run: lscpu
+
+      - run: echo "Operating System"
+      - run: cat /etc/os-release
